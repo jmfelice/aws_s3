@@ -4,8 +4,8 @@ from typing import Optional
 import os
 import logging
 from botocore.config import Config
-from src.aws_s3.exceptions import UploadError, AuthenticationError, S3Error
-from src.aws_s3.config import S3Config
+from .exceptions import UploadError, AuthenticationError, S3Error
+from .config import S3Config
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # Configure module logger
