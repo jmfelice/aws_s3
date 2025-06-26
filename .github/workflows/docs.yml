@@ -41,18 +41,18 @@ jobs:
       - name: Clean build directory
         run: |
           cd docs
-          rm -rf _build/
+          rm -rf docs/build/
           make clean
 
       - name: Build documentation
         run: |
           cd docs
-          sphinx-build -b html . _build/html
+          sphinx-build -b html . build/html
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: docs/_build/html
+          path: docs/build/html
 
   deploy:
     environment:
